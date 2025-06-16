@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JM Silver</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('images/back.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    .overlay {
+      background-color: rgba(228, 228, 228, 0.2);
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #333;
+      padding: 15px 0;
+      text-align: center;
+      color: white;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 40px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .gallery-item {
+      width: 200px;
+      text-align: center;
+      background: white;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px gray;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      background: #333;
+      color: white;
+      padding: 10px;
+    }
+
+    /* Lightbox styles */
+    #lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    #lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border: 5px solid white;
+      border-radius: 10px;
+      box-shadow: 0 0 20px black;
+    }
+
+    #lightbox:hover {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <header>
+      <div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
+        <img src="jmlogo.png" alt="JM Silver Logo" style="width: 60px; height: 60px; border-radius: 50%;">
+        <h1 style="margin: 0;">JM Silver</h1>
+      </div>
+      <nav style="margin-top: 10px;">
+        <a href="#home">Home</a>
+        <a href="#gallery">Anklets</a>
+        <a href="#details">More Details</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+<section id="home" style="
+  text-align: center;
+  padding: 60px 20px;
+  color: #fff;
+  background-image: url('images/v2.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  margin: 40px auto;
+  max-width: 900px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  position: relative;
+  overflow: hidden;
+">
+
+  <!-- Semi-transparent dark overlay for text readability -->
+  <div style="
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  "></div>
+
+  <div style="position: relative; z-index: 2;">
+    <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Welcome to <span style="color: #ffccff;">JM Silver</span></h2>
+    <p style="font-size: 1.2rem; line-height: 1.8;">
+      Discover the charm of tradition and the elegance of craftsmanship.<br>
+      <strong>JM Silver</strong> offers you premium quality, handcrafted <em>pure silver anklets</em> — perfect for every occasion and every step you take.
+    </p>
+  </div>
+
+</section>
+
+
+
+    <section id="gallery">
+      <h2>Our Anklets Collection</h2>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="images/kuspu salangai.jpeg" alt="Kuspu Salangai" onclick="openLightbox(this.src)">
+          <p>KUSPU SALANGAI</p>
+          <P>குஷ்பூ சலங்கை</P>
+          <p>Weight: 95 grams</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/KUSHBU SALANGAI 2.jpeg" alt="Kuspu Salangai" onclick="openLightbox(this.src)">
+          <p>KUSPU SALANGAI 2</p>
+          <p>குஷ்பு சலங்கை 2</p>
+          <p>Weight: 100 grams</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/KUTHIYAM SALANGAI.jpeg" alt="Kuthiyam Salangai" onclick="openLightbox(this.src)">
+          <p>KUTHIYAM SALANGAI</p>
+          <p>குதியம் சலங்கை</p>
+          <p>Weight: 70 grams</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/KUTHIYAM DOUBLE SALANGAI.jpeg" alt="Kuthiyam Salangai" onclick="openLightbox(this.src)">
+          <p>KUTHIYAM DOUBLE SALANGAI</p>
+          <p>குதியம் இரட்டை சலங்கை</p>
+          <p>Weight: 100 grams</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/LOOSE KUTHIYAM KUBBA DESIGN.jpeg" alt="LOOSE KUTHIYAM KUBBA DESIGN" onclick="openLightbox(this.src)">
+          <p>LOOSE KUTHIYAM KUBBA DESIGN</p>
+          <p>லூஸ் குத்தியம் குப்பா டிசைன்</p>
+          <p>Weight: 60 grams</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/LOOSE KUTHIYAM SINGLE SALANGAI.jpeg" alt="LOOSE KUTHIYAM SINGLE SALANGAI" onclick="openLightbox(this.src)">
+          <p>LOOSE KUTHIYAM SINGLE SALANGAI</p>
+          <p>லூஸ் குத்தியம் ஒற்றை சலங்கை</p>
+          <p>Weight: 65 grams</p>
+        </div>
+
+
+        <div class="gallery-item">
+          <img src="images/KUSHPU JALAR DESIGN .jpeg" alt="KUSHPU JALAR DESIGN " onclick="openLightbox(this.src)">
+          <p>KUSHPU JALAR DESIGN 1</p>
+          <p>குஷ்பு ஜாலர் டிசைன் 1</p>
+          <p>Weight: 105 grams</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/KUSHPU JALAR DESIGN 2.jpeg" alt="KUSHPU JALAR DESIGN " onclick="openLightbox(this.src)">
+          <p>KUSHPU JALAR DESIGN 2</p>
+          <p>குஷ்பு ஜாலர் டிசைன் 2</p>
+          <p>Weight: 90 grams</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/KUSHPU JALAR DESIGN 3.jpeg" alt="KUSHPU JALAR DESIGN " onclick="openLightbox(this.src)">
+          <p>KUSHPU JALAR DESIGN 3</p>
+          <p>குஷ்பு ஜாலர் டிசைன் 3</p>
+          <p>Weight: 90 grams</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/KUSHPU JALAR DESIGN 4.jpeg" alt="KUSHPU JALAR DESIGN " onclick="openLightbox(this.src)">
+          <p>KUSHPU JALAR DESIGN 4</p>
+          <p>குஷ்பு ஜாலர் டிசைன் 4</p>
+          <p>Weight: 90 grams</p>
+        </div>
+
+
+        <div class="gallery-item">
+          <img src="images/KUSHPU JALAR DESIGN 5.jpeg" alt="KUSHPU JALAR DESIGN " onclick="openLightbox(this.src)">
+          <p>KUSHPU JALAR DESIGN 5</p>
+          <p>குஷ்பு ஜாலர் டிசைன் 5</p>
+          <p>Weight: 130 grams</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/KUSHPU JALAR DESIGN 6.jpeg" alt="KUSHPU JALAR DESIGN " onclick="openLightbox(this.src)">
+          <p>KUSHPU JALAR DESIGN 6</p>
+          <p>குஷ்பு ஜாலர் டிசைன் 6</p>
+          <p>Weight: 90 grams</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/KUSHPU JALAR DESIGN 7.jpeg" alt="KUSHPU JALAR DESIGN " onclick="openLightbox(this.src)">
+          <p>KUSHPU JALAR DESIGN 7</p>
+          <p>குஷ்பு ஜாலர் டிசைன் 7</p>
+          <p>Weight: 90 grams</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/KUSHPU JALAR DESIGN 8.jpeg" alt="KUSHPU JALAR DESIGN " onclick="openLightbox(this.src)">
+          <p>KUSHPU JALAR DESIGN 8</p>
+          <p>குஷ்பு ஜாலர் டிசைன் 8</p>
+          <p>Weight: 90 grams</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/KUSHPU JALAR DESIGN 9.jpeg" alt="KUSHPU JALAR DESIGN " onclick="openLightbox(this.src)">
+          <p>KUSHPU JALAR DESIGN 9</p>
+          <p>குஷ்பு ஜாலர் டிசைன் 9</p>
+          <p>Weight: 180 grams</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/KUSHPU JALAR DESIGN 10.jpeg" alt="KUSHPU JALAR DESIGN " onclick="openLightbox(this.src)">
+          <p>KUSHPU JALAR DESIGN 10</p>
+          <p>குஷ்பு ஜாலர் டிசைன் 10</p>
+          <p>Weight: 170 grams</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/KUSHPU JALAR DESIGN 11.jpeg" alt="KUSHPU JALAR DESIGN " onclick="openLightbox(this.src)">
+          <p>KUSHPU JALAR DESIGN 11</p>
+          <p>குஷ்பு ஜாலர் டிசைன் 11</p>
+          <p>Weight: 100 grams</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/KUSHPU JADA PINNAL.jpeg" alt="KUSHPU JADA PINNAL " onclick="openLightbox(this.src)">
+          <p>KUSHPU JADA PINNAL10</p>
+          <p>குஷ்பு ஜடை பின்னல்10</p>
+          <p>Weight: 80 grams</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/KUSHPU POO & KUBBA.jpeg" alt="KUSHPU POO & KUBBA" onclick="openLightbox(this.src)">
+          <p>KUSHPU POO & KUBBA</p>
+          <p>குஷ்பு பூ & குப்பா</p>
+          <p>Weight: 80 grams</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/DOUBLE & TRIPLE KUSHPU PLAIN DESIGNS.jpeg" alt="Kuspu Salangai" onclick="openLightbox(this.src)">
+          <p>DOUBLE & TRIPLE KUSHPU PLAIN DESIGNS</p>
+          <p>இரண்டு & மூன்று குஷ்பு எளிய டிசைன்</p>
+          <p>Weight: 100 grams</p>
+        </div>
+
+      
+          <div class="gallery-item">
+          <img src="images/S CHAIN ARUMBU.jpeg" alt="S CHAIN ARUMBU" onclick="openLightbox(this.src)">
+          <p>S CHAIN ARUMBU</p>
+          <p>எஸ் செயின் அரும்பு</p>
+          <p>Weight: 95 grams</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/S-CHAIN ONE SIDE ARUMBU.jpeg" alt="S-CHAIN ONE SIDE ARUMBU" onclick="openLightbox(this.src)">
+          <p>S-CHAIN ONE SIDE ARUMBU</p>
+          <p>எஸ்-செயின் ஒரு பக்க அரும்பு</p>
+          <p>Weight: 70/ grams</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/S-CHAIN TWO SIDE ARUMBU.jpeg" alt="S-CHAIN TWO SIDE ARUMBU" onclick="openLightbox(this.src)">
+          <p>S-CHAIN TWO SIDE ARUMBU</p>
+          <p>எஸ்-செயின் இரண்டு பக்க அரும்பு</p>
+          <p>Weight: 100 grams</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/S-CHAIN SINGLE SALANGAI.jpeg" alt="S-CHAIN SINGLE SALANGAI" onclick="openLightbox(this.src)">
+          <p>S-CHAIN SINGLE SALANGAI</p>
+          <p>எஸ்-செயின் சிங்கிள் சலங்கை</p>
+          <p>Weight: 80 grams</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/S-CHAIN DOUBLE SALANGAI.jpeg" alt="S-CHAIN DOUBLE SALANGAI" onclick="openLightbox(this.src)">
+          <p>S-CHAIN DOUBLE SALANGAI</p>
+          <p>எஸ்-செயின் டபுள் சலங்கை</p>
+          <p>Weight: 90 grams</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/S-CHAIN 3 SALLA .jpeg" alt="S-CHAIN 3 SALLA " onclick="openLightbox(this.src)">
+          <p>S-CHAIN 3 SALLA </p>
+          <p>எஸ்-செயின் மூன்று சல்லா</p>
+          <p>Weight: 250 grams</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/S-CHAIN 3 MALLI.jpeg" alt="S-CHAIN 3 MALLI " onclick="openLightbox(this.src)">
+          <p>S-CHAIN 3 MALLI</p>
+          <p>எஸ்-செயின் மூன்று மல்லி</p>
+          <p>Weight: 175 grams</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/S-CHIAN POO & KUBBA.jpeg" alt="S-CHIAN POO & KUBBA " onclick="openLightbox(this.src)">
+          <p>S-CHIAN POO & KUBBA</p>
+          <p>எஸ்-செயின் பூ & குப்பா</p>
+          <p>Weight: 85 grams</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/S-CHAIN POO & SALANGAI.jpeg" alt="S-CHAIN POO & SALANGAI" onclick="openLightbox(this.src)">
+          <p>S-CHAIN POO & SALANGAI</p>
+          <p>எஸ்-செயின் பூ & சலங்கை</p>
+          <p>Weight: 80 grams</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/S-CHAIN FANCY DESIGNS.jpeg" alt="S-CHAIN FANCY DESIGNS" onclick="openLightbox(this.src)">
+          <p>S-CHAIN FANCY DESIGNS 1</p>
+          <p>எஸ்-செயின் ஃபேன்சி டிசைன்கள் 1</p>
+          <p>Weight: 75 grams</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/S-CHAIN FANCY DESIGNS 2.jpeg" alt="S-CHAIN FANCY DESIGNS" onclick="openLightbox(this.src)">
+          <p>S-CHAIN FANCY DESIGNS 2</p>
+          <p>எஸ்-செயின் ஃபேன்சி டிசைன்கள் 2</p>
+          <p>Weight: 75 grams</p>
+        </div>
+
+        <!-- Add more anklets in the same format -->
+      </div>
+    </section>
+<section id="details" style="
+  background: linear-gradient(rgba(171, 167, 167, 0.7), rgba(255,255,255,0.7)), url('images/details.jpg') no-repeat center center/cover;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 10px;
+  max-width: 1000px;
+  margin: 40px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+">
+  <h2 style="font-size: 2.2rem; color: #9c27b0; margin-bottom: 20px;">Why Choose JM Silver?</h2>
+  <p style="font-size: 1.2rem; line-height: 1.8; color: #444;">
+    At <strong>JM Silver</strong>, we believe in elegance, quality, and customer satisfaction. Here's why our clients love us:
+  </p>
+
+  <ul style="text-align: left; max-width: 800px; margin: 30px auto; font-size: 1.1rem; line-height: 1.8; color: #333;">
+    <li>✨ <strong>Premium quality products</strong> crafted with pure silver and traditional artistry.</li>
+    <li>📦 <strong>Large quantity orders</strong> accepted and delivered swiftly without compromising on quality.</li>
+    <li>🎨 <strong>Customized designs</strong> delivered as per your personal taste and preference.</li>
+    <li>📞 <strong>Reach us easily</strong> through our direct <em>phone contact</em> for orders and queries.</li>
+    <li>🏭 <strong>In-house manufacturing</strong> with our own factory ensures better pricing and excellent quality control.</li>
+    <li>🚚 <strong>Fast and secure delivery</strong> across India for both retail and bulk orders.</li>
+    <li>🤝 <strong>Trusted by loyal customers</strong> for our transparency and customer-first approach.</li>
+    <li>💎 <strong>Exclusive designs</strong> launched regularly to match the latest fashion trends.</li>
+  </ul>
+
+  <p style="font-size: 1.1rem; color: #000000; margin-top: 20px;">
+   <strong> Experience the sparkle of tradition and elegance at JM Silver. <br>Quality you can trust. Beauty you’ll love.</strong>
+  </p>
+</section>
+
+<section id="contact" style="padding: 60px 20px; background-color: #f8f8f8; text-align: center;">
+  <h2 style="font-size: 2.5em; margin-bottom: 20px; color: #333;">Get in Touch with JM Silver</h2>
+  
+  <p style="font-size: 1.2em; color: #555; max-width: 600px; margin: 0 auto 30px;">
+    We'd love to hear from you! Whether you have questions, custom requests, or bulk order inquiries — our team is ready to assist you.
+  </p>
+
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; font-size: 1.1em; color: #444;">
+    <p><strong>📞 Phone:</strong> <a href="tel:+918925552287" style="color: #000;">+91 8925552287</a></p>
+    <p><strong>📧 Email:</strong> <a href="mailto:muruge2287@gmail.com" style="color: #000;">muruge2287@gmail.com</a></p>
+    <p><strong>📍 Location:</strong>Salem, Tamil Nadu, India</p>
+    <p><strong>🏢 Address:</strong> selva vinayagar kovil<br>Siva Sakthi Nagar, Seelanaikenpatty<br>Salem - 636 201, Tamil Nadu, India</p>
+    <p><strong>🧾 GSTIN:</strong> 33AUVPM0960G1ZF</p> <!-- Replace with your actual GST number -->
+  </div>
+
+  <p style="margin-top: 30px; font-size: 1em; color: #777;">
+    Feel free to visit our factory or call us during business hours. We're committed to delivering quality and personalized service.
+  </p>
+</section>
+
+
+
+    <footer>
+      <p>&copy; 2025 JM Silver. All rights reserved.</p>
+    </footer>
+
+    <!-- Lightbox Popup -->
+    <div id="lightbox" onclick="closeLightbox()">
+      <img id="lightbox-img" src="" alt="Full View">
+    </div>
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById("lightbox-img").src = src;
+      document.getElementById("lightbox").style.display = "flex";
+    }
+
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+  </script>
+</body>
+</html>
